@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" class="is-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Gallery | Fortune Windoors</title>
+  <meta name="description" content="A look at Fortune Windoors installations — uPVC and System Aluminium windows and doors across Bengaluru homes.">
+  <link rel="icon" href="assets/fortune-logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: "#0A1F5C", deep: "#061433" },
+            gold: { DEFAULT: "#C9A227", soft: "#E4C35A" },
+            cream: "#F7F4EC"
+          },
+          fontFamily: {
+            display: ["Montserrat", "sans-serif"],
+            sans: ["Inter", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+  <style>html.is-loading,html.is-loading body{overflow:hidden}.page-loader{position:fixed;inset:0;z-index:9999;background:#fff;display:flex;align-items:center;justify-content:center}</style>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="gallery" class="bg-white">
+  <div id="page-loader" class="page-loader">
+    <div class="loader-brand">
+      <img src="assets/fortune-logo.png" alt="Fortune Windoors" class="loader-logo">
+      <div class="loader-progress"><span></span></div>
+    </div>
+  </div>
+  <div id="site-header"></div>
+
+  <section class="page-hero bg-navy text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <p class="eyebrow gold-rule justify-start">Gallery</p>
+      <h1 class="font-display text-4xl sm:text-6xl font-extrabold mt-4">Spaces shaped by better openings.</h1>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-wrap gap-3 mb-10">
+        <button type="button" data-filter="all" class="filter-btn active rounded-full px-5 py-2 border border-navy/15 text-sm font-semibold">All</button>
+        <button type="button" data-filter="upvc" class="filter-btn rounded-full px-5 py-2 border border-navy/15 text-sm font-semibold">uPVC</button>
+        <button type="button" data-filter="aluminium" class="filter-btn rounded-full px-5 py-2 border border-navy/15 text-sm font-semibold">System Aluminium</button>
+        <button type="button" data-filter="windows" class="filter-btn rounded-full px-5 py-2 border border-navy/15 text-sm font-semibold">Windows</button>
+        <button type="button" data-filter="doors" class="filter-btn rounded-full px-5 py-2 border border-navy/15 text-sm font-semibold">Doors</button>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <article data-category="upvc windows" class="gallery-item gallery-card rounded-3xl overflow-hidden h-72"><img src="assets/products/upvc-sliding-window.png" alt="uPVC sliding windows" class="w-full h-full object-cover"></article>
+        <article data-category="upvc windows" class="gallery-item gallery-card rounded-3xl overflow-hidden h-72"><img src="assets/products/upvc-casement-window.png" alt="uPVC casement window" class="w-full h-full object-cover"></article>
+        <article data-category="upvc doors" class="gallery-item gallery-card rounded-3xl overflow-hidden h-72"><img src="assets/products/upvc-balcony-door.png" alt="uPVC sliding balcony door" class="w-full h-full object-cover"></article>
+        <article data-category="upvc windows" class="gallery-item gallery-card rounded-3xl overflow-hidden h-72"><img src="assets/products/upvc-combination-window.png" alt="uPVC combination window" class="w-full h-full object-cover"></article>
+        <article data-category="upvc windows" class="gallery-item gallery-card rounded-3xl overflow-hidden h-72"><img src="assets/products/upvc-profile-closeup.png" alt="uPVC window profile close-up" class="w-full h-full object-cover"></article>
+        <article data-category="aluminium doors" class="gallery-item gallery-card rounded-3xl overflow-hidden h-72"><img src="assets/products/aluminium-sliding-door.png" alt="System aluminium sliding door" class="w-full h-full object-cover"></article>
+        <article data-category="aluminium windows" class="gallery-item gallery-card rounded-3xl overflow-hidden h-72"><img src="assets/products/aluminium-sliding-window.png" alt="System aluminium sliding window" class="w-full h-full object-cover"></article>
+        <article data-category="aluminium windows" class="gallery-item gallery-card rounded-3xl overflow-hidden h-72"><img src="assets/products/aluminium-casement-window.png" alt="System aluminium casement window" class="w-full h-full object-cover"></article>
+        <article data-category="aluminium doors" class="gallery-item gallery-card rounded-3xl overflow-hidden h-72"><img src="assets/products/aluminium-entrance-door.png" alt="System aluminium entrance door" class="w-full h-full object-cover"></article>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="js/main.js"></script>
+</body>
+</html>

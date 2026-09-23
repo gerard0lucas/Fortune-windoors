@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" class="is-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Contact Fortune Windoors | Bengaluru</title>
+  <meta name="description" content="Visit Fortune Windoors at Shop No. 03, Vidyaranyapura Main Road, Bengaluru, or call +91 96113 70116.">
+  <link rel="icon" href="assets/fortune-logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: "#0A1F5C", deep: "#061433" },
+            gold: { DEFAULT: "#C9A227", soft: "#E4C35A" },
+            cream: "#F7F4EC"
+          },
+          fontFamily: {
+            display: ["Montserrat", "sans-serif"],
+            sans: ["Inter", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+  <style>html.is-loading,html.is-loading body{overflow:hidden}.page-loader{position:fixed;inset:0;z-index:9999;background:#fff;display:flex;align-items:center;justify-content:center}</style>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="contact" class="bg-white">
+  <div id="page-loader" class="page-loader">
+    <div class="loader-brand">
+      <img src="assets/fortune-logo.png" alt="Fortune Windoors" class="loader-logo">
+      <div class="loader-progress"><span></span></div>
+    </div>
+  </div>
+  <div id="site-header"></div>
+
+  <section class="page-hero bg-navy text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <p class="eyebrow gold-rule justify-start">Contact</p>
+      <h1 class="font-display text-4xl sm:text-6xl font-extrabold mt-4">Visit the shop or send an enquiry.</h1>
+    </div>
+  </section>
+
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-10 js-reveal">
+      <div>
+        <p class="eyebrow gold-rule justify-start">Fortune Windoors</p>
+        <h2 class="section-title text-3xl mt-4">Harsha Kodnadad</h2>
+        <p class="text-slate-600 mt-3">Manufacturer of uPVC and System Aluminium windows and doors.</p>
+        <div class="mt-8 space-y-5">
+          <a href="tel:+919611370116" class="flex items-start gap-4 p-5 rounded-2xl border border-navy/10 hover:border-gold transition">
+            <span class="w-12 h-12 rounded-full bg-cream text-navy flex items-center justify-center"><i class="fa-solid fa-mobile-screen-button"></i></span>
+            <span><span class="block text-sm text-slate-500">Mobile</span><span class="font-semibold text-navy">+91 96113 70116</span></span>
+          </a>
+          <a href="tel:08029902698" class="flex items-start gap-4 p-5 rounded-2xl border border-navy/10 hover:border-gold transition">
+            <span class="w-12 h-12 rounded-full bg-cream text-navy flex items-center justify-center"><i class="fa-solid fa-phone"></i></span>
+            <span><span class="block text-sm text-slate-500">Landline</span><span class="font-semibold text-navy">080 2990 2698</span></span>
+          </a>
+          <a href="mailto:info@fortuneindoors.com" class="flex items-start gap-4 p-5 rounded-2xl border border-navy/10 hover:border-gold transition">
+            <span class="w-12 h-12 rounded-full bg-cream text-navy flex items-center justify-center"><i class="fa-solid fa-envelope"></i></span>
+            <span><span class="block text-sm text-slate-500">Email</span><span class="font-semibold text-navy">info@fortuneindoors.com</span></span>
+          </a>
+          <a href="https://www.fortuneindoors.com" target="_blank" rel="noopener" class="flex items-start gap-4 p-5 rounded-2xl border border-navy/10 hover:border-gold transition">
+            <span class="w-12 h-12 rounded-full bg-cream text-navy flex items-center justify-center"><i class="fa-solid fa-globe"></i></span>
+            <span><span class="block text-sm text-slate-500">Website</span><span class="font-semibold text-navy">www.fortuneindoors.com</span></span>
+          </a>
+          <div class="flex items-start gap-4 p-5 rounded-2xl border border-navy/10">
+            <span class="w-12 h-12 rounded-full bg-cream text-navy flex items-center justify-center"><i class="fa-solid fa-location-dot"></i></span>
+            <span><span class="block text-sm text-slate-500">Address</span><span class="font-semibold text-navy">Shop No. 03, Vidyaranyapura Main Road, HEMT Layout, Bengaluru, Bengaluru Urban, Karnataka 560097</span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-cream rounded-[2rem] p-8">
+        <h3 class="section-title text-2xl">Send a message</h3>
+        <form class="js-contact-form mt-6 space-y-4">
+          <input class="form-field w-full bg-white border border-navy/10 rounded-xl px-4 py-3" type="text" name="name" placeholder="Full name" required>
+          <input class="form-field w-full bg-white border border-navy/10 rounded-xl px-4 py-3" type="tel" name="phone" placeholder="Phone" required>
+          <input class="form-field w-full bg-white border border-navy/10 rounded-xl px-4 py-3" type="email" name="email" placeholder="Email">
+          <select class="form-field w-full bg-white border border-navy/10 rounded-xl px-4 py-3" name="interest" required>
+            <option value="">I am interested in</option>
+            <option>uPVC Windows</option>
+            <option>uPVC Doors</option>
+            <option>System Aluminium Windows</option>
+            <option>System Aluminium Doors</option>
+            <option>Site visit / measurement</option>
+          </select>
+          <textarea class="form-field w-full bg-white border border-navy/10 rounded-xl px-4 py-3" name="message" rows="4" placeholder="Tell us about the site"></textarea>
+          <button type="submit" class="btn-gold rounded-full px-7 py-3">Submit enquiry</button>
+          <p class="js-form-success hidden text-sm text-emerald-700">Thank you. Fortune Windoors will contact you shortly.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="pb-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="map-embed rounded-[2rem] overflow-hidden h-[420px] border border-navy/10">
+        <iframe title="Fortune Windoors location" src="https://maps.google.com/maps?q=Vidyaranyapura%20Main%20Road%20HEMT%20Layout%20Bengaluru%20560097&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="js/main.js"></script>
+</body>
+</html>
