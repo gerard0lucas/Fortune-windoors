@@ -122,11 +122,11 @@
 
     if (footer) {
       footer.innerHTML =
-        '<footer class="bg-navy-deep text-white mt-0">' +
+        '<footer class="site-footer">' +
         '<div class="max-w-7xl mx-auto px-4 sm:px-6 py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-10">' +
         '<div>' +
-        '<img src="assets/fortune-logo.avif" alt="Fortune Windoors" class="h-16 w-auto max-w-[240px] object-contain bg-white rounded-xl px-3 py-2 mb-5">' +
-        '<p class="text-white/70 leading-relaxed">Manufacturer of uPVC and System Aluminium windows and doors in Bengaluru since 2012.</p>' +
+        '<img src="assets/fortune-logo.avif" alt="Fortune Windoors" class="h-16 w-auto max-w-[240px] object-contain rounded-xl px-3 py-2 mb-5 border border-navy/10">' +
+        '<p class="leading-relaxed">Manufacturer of uPVC and System Aluminium windows and doors in Bengaluru since 2012.</p>' +
         "</div>" +
         '<div><h3 class="font-display font-semibold mb-4">Quick Links</h3>' +
         '<ul class="footer-list">' +
@@ -145,17 +145,17 @@
         '<li><a href="products.html#aluminium-doors">System Aluminium Doors</a></li>' +
         "</ul></div>" +
         '<div><h3 class="font-display font-semibold mb-4">Visit Us</h3>' +
-        '<ul class="space-y-3 text-white/75">' +
+        '<ul class="space-y-3">' +
         '<li class="flex gap-3"><i class="fa-solid fa-location-dot text-gold mt-1"></i><span>Shop No. 03, Vidyaranyapura Main Road, HEMT Layout, Bengaluru, Karnataka 560097</span></li>' +
-        '<li class="flex gap-3"><i class="fa-solid fa-phone text-gold mt-1"></i><a href="tel:+919611370116" class="hover:text-gold">+91 96113 70116</a></li>' +
-        '<li class="flex gap-3"><i class="fa-solid fa-tty text-gold mt-1"></i><a href="tel:08029902698" class="hover:text-gold">080 2990 2698</a></li>' +
-        '<li class="flex gap-3"><i class="fa-solid fa-envelope text-gold mt-1"></i><a href="mailto:info@fortuneindoors.com" class="hover:text-gold">info@fortuneindoors.com</a></li>' +
-        '<li class="flex gap-3"><i class="fa-solid fa-globe text-gold mt-1"></i><a href="https://www.fortuneindoors.com" class="hover:text-gold" target="_blank" rel="noopener">www.fortuneindoors.com</a></li>' +
+        '<li class="flex gap-3"><i class="fa-solid fa-phone text-gold mt-1"></i><a href="tel:+919611370116">+91 96113 70116</a></li>' +
+        '<li class="flex gap-3"><i class="fa-solid fa-tty text-gold mt-1"></i><a href="tel:08029902698">080 2990 2698</a></li>' +
+        '<li class="flex gap-3"><i class="fa-solid fa-envelope text-gold mt-1"></i><a href="mailto:info@fortuneindoors.com">info@fortuneindoors.com</a></li>' +
+        '<li class="flex gap-3"><i class="fa-solid fa-globe text-gold mt-1"></i><a href="https://www.fortuneindoors.com" target="_blank" rel="noopener">www.fortuneindoors.com</a></li>' +
         "</ul></div></div>" +
-        '<div class="border-t border-white/10">' +
-        '<div class="max-w-7xl mx-auto px-4 sm:px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-white/55">' +
+        '<div class="footer-copy">' +
+        '<div class="max-w-7xl mx-auto px-4 sm:px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm">' +
         '<p>&copy; <span class="js-year"></span> Fortune Windoors. All rights reserved.</p>' +
-        '<p class="tracking-[0.2em] uppercase text-gold/80">uPVC | System Aluminium</p>' +
+        '<p class="tracking-[0.2em] uppercase text-gold">uPVC | System Aluminium</p>' +
         "</div></div></footer>";
     }
   }

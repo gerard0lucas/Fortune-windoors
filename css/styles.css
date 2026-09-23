@@ -7,20 +7,54 @@
   --header-h: 129px;
   --page-hero-h: 480px;
   color-scheme: only light;
+  supported-color-schemes: light;
 }
 
 html {
   scroll-behavior: smooth;
   color-scheme: only light;
-  background: #fff;
+  background: #ffffff;
+  forced-color-adjust: none;
 }
 
 body {
   font-family: Inter, system-ui, sans-serif;
   color: #1b2433;
-  background: #fff;
+  background: #ffffff;
   overflow-x: hidden;
   color-scheme: only light;
+  forced-color-adjust: none;
+}
+
+html, body, #site-footer, .site-footer {
+  background-color: #ffffff !important;
+}
+
+.site-footer {
+  background: #ffffff;
+  color: #0a1f5c;
+  color-scheme: only light;
+  forced-color-adjust: none;
+  border-top: 1px solid rgba(10, 31, 92, 0.08);
+}
+
+.site-footer h3 {
+  color: #0a1f5c;
+}
+
+.site-footer p,
+.site-footer li,
+.site-footer a {
+  color: #4b5563;
+}
+
+.site-footer a:hover {
+  color: #0a1f5c;
+}
+
+.site-footer .footer-copy {
+  border-top: 1px solid rgba(10, 31, 92, 0.08);
+  color: #6b7280;
 }
 
 .footer-list {
@@ -29,7 +63,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  color: rgba(255, 255, 255, 0.75);
+  color: #4b5563;
 }
 
 .footer-list ::marker {
@@ -37,7 +71,26 @@ body {
 }
 
 .footer-list a:hover {
-  color: var(--gold);
+  color: var(--navy);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root,
+  html,
+  body {
+    color-scheme: only light;
+    background: #ffffff !important;
+    color: #1b2433 !important;
+  }
+
+  .site-footer,
+  #site-footer,
+  #site-footer footer,
+  .visiting-card,
+  .visit-panel-light {
+    background: #ffffff !important;
+    color: #0a1f5c !important;
+  }
 }
 
 img {
@@ -481,7 +534,8 @@ img.gallery-card:hover {
 .visiting-card {
   box-shadow: 0 24px 60px rgba(10, 31, 92, 0.16);
   background: #fff;
-  color-scheme: light;
+  color-scheme: only light;
+  forced-color-adjust: none;
 }
 
 .visit-panel-navy {
