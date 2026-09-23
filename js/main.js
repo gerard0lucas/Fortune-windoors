@@ -44,7 +44,7 @@
         '<span class="ticker-dot"></span>' +
         '<a href="tel:08029902698"><i class="fa-solid fa-phone text-gold"></i>080 2990 2698</a>' +
         '<span class="ticker-dot"></span>' +
-        '<a href="mailto:info@fortuneindoors.com"><i class="fa-solid fa-envelope text-gold"></i>info@fortuneindoors.com</a>' +
+        '<a href="mailto:info@fortunewindoors.com"><i class="fa-solid fa-envelope text-gold"></i>info@fortunewindoors.com</a>' +
         '<span class="ticker-dot"></span>' +
         '<span><i class="fa-solid fa-location-dot text-gold"></i>Vidyaranyapura, Bengaluru</span>' +
         '<span class="ticker-dot"></span>' +
@@ -149,8 +149,7 @@
         '<li class="flex gap-3"><i class="fa-solid fa-location-dot text-gold mt-1"></i><span>Shop No. 03, Vidyaranyapura Main Road, HEMT Layout, Bengaluru, Karnataka 560097</span></li>' +
         '<li class="flex gap-3"><i class="fa-solid fa-phone text-gold mt-1"></i><a href="tel:+919611370116">+91 96113 70116</a></li>' +
         '<li class="flex gap-3"><i class="fa-solid fa-tty text-gold mt-1"></i><a href="tel:08029902698">080 2990 2698</a></li>' +
-        '<li class="flex gap-3"><i class="fa-solid fa-envelope text-gold mt-1"></i><a href="mailto:info@fortuneindoors.com">info@fortuneindoors.com</a></li>' +
-        '<li class="flex gap-3"><i class="fa-solid fa-globe text-gold mt-1"></i><a href="https://www.fortuneindoors.com" target="_blank" rel="noopener">www.fortuneindoors.com</a></li>' +
+        '<li class="flex gap-3"><i class="fa-solid fa-envelope text-gold mt-1"></i><a href="mailto:info@fortunewindoors.com">info@fortunewindoors.com</a></li>' +
         "</ul></div></div>" +
         '<div class="footer-copy">' +
         '<div class="max-w-7xl mx-auto px-4 sm:px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm">' +
