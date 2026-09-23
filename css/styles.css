@@ -4,10 +4,15 @@
   --gold: #c9a227;
   --gold-soft: #e4c35a;
   --cream: #f7f4ec;
+  --header-h: 129px;
+  --page-hero-h: 480px;
+  color-scheme: only light;
 }
 
 html {
   scroll-behavior: smooth;
+  color-scheme: only light;
+  background: #fff;
 }
 
 body {
@@ -15,6 +20,7 @@ body {
   color: #1b2433;
   background: #fff;
   overflow-x: hidden;
+  color-scheme: only light;
 }
 
 .footer-list {
@@ -474,6 +480,28 @@ img.gallery-card:hover {
 
 .visiting-card {
   box-shadow: 0 24px 60px rgba(10, 31, 92, 0.16);
+  background: #fff;
+  color-scheme: light;
+}
+
+.visit-panel-navy {
+  background: #0a1f5c;
+  color: #fff;
+}
+
+.visit-panel-light {
+  background: #fff;
+  color: #0a1f5c;
+}
+
+@media (max-width: 767px) {
+  .visiting-card {
+    margin-bottom: 4.5rem;
+  }
+}
+
+#site-footer footer {
+  padding-bottom: calc(5.75rem + env(safe-area-inset-bottom, 0px));
 }
 
 .map-embed iframe {
@@ -559,21 +587,6 @@ img.gallery-card:hover {
   to { width: 100%; }
 }
 
-.header-rule {
-  position: relative;
-  height: 3px;
-  background: rgba(10, 31, 92, 0.08);
-}
-
-.scroll-progress {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 3px;
-  width: 0;
-  background: var(--gold);
-}
-
 .top-ticker {
   overflow: hidden;
   background: var(--navy);
@@ -591,9 +604,6 @@ img.gallery-card:hover {
   transition: transform 0.35s ease, box-shadow 0.3s ease;
 }
 
-body:not([data-page="home"]) {
-  padding-top: var(--header-h, 118px);
-}
 
 .ticker-track {
   display: flex;
@@ -972,9 +982,63 @@ body:not([data-page="home"]) {
   50% { transform: translateY(8px); }
 }
 
-.page-hero {
+section.page-hero {
   position: relative;
   overflow: hidden;
+  box-sizing: border-box;
+  width: 100%;
+  height: var(--page-hero-h);
+  min-height: var(--page-hero-h);
+  max-height: var(--page-hero-h);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: flex-end;
+  flex-shrink: 0;
+  background-color: #061433;
+  background-size: cover;
+  background-position: center;
+}
+
+.page-hero-about { background-image: url("../assets/products/about-workshop.png"); }
+.page-hero-services { background-image: url("../assets/products/aluminium-casement-window.png"); }
+.page-hero-products { background-image: url("../assets/products/upvc-sliding-window.png"); }
+.page-hero-gallery { background-image: url("../assets/products/aluminium-sliding-door.png"); }
+.page-hero-blog { background-image: url("../assets/products/upvc-casement-window.png"); }
+.page-hero-contact { background-image: url("../assets/products/aluminium-entrance-door.png"); }
+.page-hero-article-upvc { background-image: url("../assets/products/upvc-sliding-window.png"); }
+.page-hero-article-choose { background-image: url("../assets/products/upvc-casement-window.png"); }
+.page-hero-article-alu { background-image: url("../assets/products/aluminium-sliding-door.png"); }
+
+.page-hero-inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1.25rem 2.75rem;
+}
+
+.page-hero h1 {
+  font-family: Montserrat, Inter, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin: 0.55rem 0 0;
+  max-width: 46rem;
+  min-height: 2.3em;
+  font-size: 2.55rem;
+}
+
+.page-hero-lead {
+  display: none;
+}
+
+.page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, rgba(6, 20, 51, 0.9) 0%, rgba(10, 31, 92, 0.72) 52%, rgba(6, 20, 51, 0.5) 100%);
 }
 
 .page-hero::after {
@@ -1054,6 +1118,11 @@ body:not([data-page="home"]) {
 }
 
 @media (max-width: 767px) {
+  :root {
+    --header-h: 109px;
+    --page-hero-h: 360px;
+  }
+
   .top-ticker {
     max-height: 34px;
   }
@@ -1185,6 +1254,23 @@ body:not([data-page="home"]) {
   section.py-16 {
     padding-top: 3rem;
     padding-bottom: 3rem;
+  }
+
+  section.page-hero {
+    height: var(--page-hero-h);
+    min-height: var(--page-hero-h);
+    max-height: var(--page-hero-h);
+    margin: 0;
+    padding: 0;
+  }
+
+  .page-hero-inner {
+    padding: 0 1rem 1.6rem;
+  }
+
+  .page-hero h1 {
+    font-size: 1.7rem;
+    min-height: 2.3em;
   }
 
   h2.section-title,

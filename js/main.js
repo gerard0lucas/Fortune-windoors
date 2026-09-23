@@ -5,7 +5,7 @@
     { id: "home", href: "index.html", label: "Home" },
     { id: "about", href: "about.html", label: "About" },
     { id: "products", href: "products.html", label: "Products" },
-    { id: "services", href: "index.html#services", label: "Services" },
+    { id: "services", href: "services.html", label: "Services" },
     { id: "gallery", href: "gallery.html", label: "Gallery" },
     { id: "blog", href: "blog.html", label: "Blog" },
     { id: "contact", href: "contact.html", label: "Contact" }
@@ -69,8 +69,7 @@
         '<button type="button" class="js-open-quote hidden sm:inline-flex btn-gold rounded-full px-4 md:px-5 py-2.5 text-sm">Get a Quote</button>' +
         '<button type="button" id="menu-toggle" class="xl:hidden w-11 h-11 rounded-full border border-navy/15 text-navy" aria-label="Open menu">' +
         '<i class="fa-solid fa-bars"></i></button>' +
-        "</div></div>" +
-        '<div class="header-rule"><div id="scroll-progress" class="scroll-progress"></div></div></div>' +
+        "</div></div></div>" +
         '<div id="mobile-menu" class="mobile-menu fixed inset-0 z-50 bg-navy text-white xl:hidden overflow-y-auto">' +
         '<div class="flex items-center justify-between px-4 sm:px-5 h-[72px] sm:h-[84px] bg-white">' +
         '<img src="assets/fortune-logo.avif" alt="Fortune Windoors" class="h-10 sm:h-12 w-auto max-w-[168px] object-contain">' +
@@ -132,7 +131,7 @@
         '<div><h3 class="font-display font-semibold mb-4">Quick Links</h3>' +
         '<ul class="footer-list">' +
         '<li><a href="about.html">About Us</a></li>' +
-        '<li><a href="index.html#services">Services</a></li>' +
+        '<li><a href="services.html">Services</a></li>' +
         '<li><a href="products.html">Products</a></li>' +
         '<li><a href="gallery.html">Gallery</a></li>' +
         '<li><a href="blog.html">Blog</a></li>' +
@@ -168,7 +167,6 @@
     const modal = document.getElementById("quote-modal");
 
     const headerRoot = document.getElementById("site-header");
-    const progress = document.getElementById("scroll-progress");
     const floatBtns = document.querySelectorAll(".float-btn");
     const firstScreen = document.querySelector(".hero-slideshow, .page-hero");
     let lastY = window.scrollY;
@@ -185,8 +183,6 @@
 
     window.addEventListener("scroll", function () {
       const y = window.scrollY;
-      const doc = document.documentElement;
-      const max = doc.scrollHeight - window.innerHeight;
       const menuOpen = menu && menu.classList.contains("open");
       const modalOpen = modal && modal.classList.contains("open");
       if (headerRoot) {
@@ -198,9 +194,6 @@
         } else if (y < lastY - 6) {
           headerRoot.classList.remove("header-hidden");
         }
-      }
-      if (progress) {
-        progress.style.width = max > 0 ? (y / max) * 100 + "%" : "0%";
       }
       if (floatBtns.length) {
         let show = y > 80;
@@ -576,13 +569,6 @@
   }
 
   function initExtras() {
-    if (!document.getElementById("scroll-progress")) {
-      const bar = document.createElement("div");
-      bar.id = "scroll-progress";
-      bar.className = "scroll-progress";
-      document.body.appendChild(bar);
-    }
-
     if (!document.querySelector(".back-to-top")) {
       const btn = document.createElement("button");
       btn.type = "button";
