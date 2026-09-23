@@ -125,7 +125,7 @@
         '<footer class="site-footer">' +
         '<div class="max-w-7xl mx-auto px-4 sm:px-6 py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-10">' +
         '<div>' +
-        '<img src="assets/fortune-logo.avif" alt="Fortune Windoors" class="h-16 w-auto max-w-[240px] object-contain rounded-xl px-3 py-2 mb-5 border border-navy/10">' +
+        '<img src="assets/3.png" alt="Fortune Windoors" class="footer-logo">' +
         '<p class="leading-relaxed">Manufacturer of uPVC and System Aluminium windows and doors in Bengaluru since 2012.</p>' +
         "</div>" +
         '<div><h3 class="font-display font-semibold mb-4">Quick Links</h3>' +

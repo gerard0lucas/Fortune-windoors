@@ -26,35 +26,44 @@ body {
   forced-color-adjust: none;
 }
 
-html, body, #site-footer, .site-footer {
+html, body {
   background-color: #ffffff !important;
 }
 
 .site-footer {
-  background: #ffffff;
-  color: #0a1f5c;
+  background: #0a1f5c;
+  color: #ffffff;
   color-scheme: only light;
   forced-color-adjust: none;
-  border-top: 1px solid rgba(10, 31, 92, 0.08);
 }
 
 .site-footer h3 {
-  color: #0a1f5c;
+  color: #ffffff;
 }
 
 .site-footer p,
 .site-footer li,
 .site-footer a {
-  color: #4b5563;
+  color: rgba(255, 255, 255, 0.78);
 }
 
 .site-footer a:hover {
-  color: #0a1f5c;
+  color: var(--gold);
+}
+
+.site-footer .footer-logo {
+  display: block;
+  height: 8.5rem;
+  width: auto;
+  max-width: 340px;
+  object-fit: contain;
+  margin-bottom: 0;
+  mix-blend-mode: screen;
 }
 
 .site-footer .footer-copy {
-  border-top: 1px solid rgba(10, 31, 92, 0.08);
-  color: #6b7280;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.55);
 }
 
 .footer-list {
@@ -63,7 +72,7 @@ html, body, #site-footer, .site-footer {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  color: #4b5563;
+  color: rgba(255, 255, 255, 0.78);
 }
 
 .footer-list ::marker {
@@ -71,7 +80,7 @@ html, body, #site-footer, .site-footer {
 }
 
 .footer-list a:hover {
-  color: var(--navy);
+  color: var(--gold);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -83,13 +92,16 @@ html, body, #site-footer, .site-footer {
     color: #1b2433 !important;
   }
 
-  .site-footer,
-  #site-footer,
-  #site-footer footer,
   .visiting-card,
   .visit-panel-light {
     background: #ffffff !important;
     color: #0a1f5c !important;
+  }
+
+  .site-footer,
+  #site-footer footer {
+    background: #0a1f5c !important;
+    color: #ffffff !important;
   }
 }
 
