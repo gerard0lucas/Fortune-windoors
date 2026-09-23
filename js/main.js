@@ -60,7 +60,7 @@
         '<div class="site-header bg-white/95 backdrop-blur border-b border-navy/5">' +
         '<div class="max-w-7xl mx-auto px-4 sm:px-6 h-[72px] sm:h-[84px] flex items-center justify-between gap-3">' +
         '<a href="index.html" class="flex items-center min-w-0 shrink">' +
-        '<img src="assets/fortune-logo.png" alt="Fortune Windoors" class="brand-logo h-10 sm:h-12 md:h-14 w-auto max-w-[160px] sm:max-w-[210px] md:max-w-[250px] object-contain">' +
+        '<img src="assets/fortune-logo.avif" alt="Fortune Windoors" class="brand-logo h-10 sm:h-12 md:h-14 w-auto max-w-[160px] sm:max-w-[210px] md:max-w-[250px] object-contain">' +
         "</a>" +
         '<nav class="nav-desktop hidden xl:flex items-center gap-5 2xl:gap-7">' +
         navLinks("") +
@@ -73,7 +73,7 @@
         '<div class="header-rule"><div id="scroll-progress" class="scroll-progress"></div></div></div>' +
         '<div id="mobile-menu" class="mobile-menu fixed inset-0 z-50 bg-navy text-white xl:hidden overflow-y-auto">' +
         '<div class="flex items-center justify-between px-4 sm:px-5 h-[72px] sm:h-[84px] bg-white">' +
-        '<img src="assets/fortune-logo.png" alt="Fortune Windoors" class="h-10 sm:h-12 w-auto max-w-[168px] object-contain">' +
+        '<img src="assets/fortune-logo.avif" alt="Fortune Windoors" class="h-10 sm:h-12 w-auto max-w-[168px] object-contain">' +
         '<button type="button" id="menu-close" class="w-11 h-11 text-navy" aria-label="Close menu"><i class="fa-solid fa-xmark text-2xl"></i></button>' +
         "</div>" +
         '<nav class="px-6 sm:px-8 pt-6 flex flex-col gap-4 sm:gap-6 text-xl sm:text-2xl font-display font-semibold">' +
@@ -126,7 +126,7 @@
         '<footer class="bg-navy-deep text-white mt-0">' +
         '<div class="max-w-7xl mx-auto px-4 sm:px-6 py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-10">' +
         '<div>' +
-        '<img src="assets/fortune-logo.png" alt="Fortune Windoors" class="h-16 w-auto max-w-[240px] object-contain bg-white rounded-xl px-3 py-2 mb-5">' +
+        '<img src="assets/fortune-logo.avif" alt="Fortune Windoors" class="h-16 w-auto max-w-[240px] object-contain bg-white rounded-xl px-3 py-2 mb-5">' +
         '<p class="text-white/70 leading-relaxed">Manufacturer of uPVC and System Aluminium windows and doors in Bengaluru since 2012.</p>' +
         "</div>" +
         '<div><h3 class="font-display font-semibold mb-4">Quick Links</h3>' +
@@ -288,7 +288,7 @@
     loader.className = "page-loader";
     loader.innerHTML =
       '<div class="loader-brand">' +
-      '<img src="assets/fortune-logo.png" alt="Fortune Windoors" class="loader-logo">' +
+      '<img src="assets/ff square.avif" alt="Fortune Windoors" class="loader-logo">' +
       '<div class="loader-progress"><span></span></div>' +
       "</div>";
     document.body.prepend(loader);

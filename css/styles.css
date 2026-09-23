@@ -457,9 +457,9 @@ img.gallery-card:hover {
 }
 
 .loader-logo {
-  width: min(420px, 78vw);
+  width: min(148px, 38vw);
   height: auto;
-  margin: 0 auto 8px;
+  margin: 0 auto 12px;
   animation: loader-pop 0.8s ease both;
 }
 
