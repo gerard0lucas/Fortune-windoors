@@ -146,7 +146,7 @@
         "</ul></div>" +
         '<div><h3 class="font-display font-semibold mb-4">Visit Us</h3>' +
         '<ul class="space-y-3">' +
-        '<li class="flex gap-3"><i class="fa-solid fa-location-dot text-gold mt-1"></i><span>Shop No. 03, Vidyaranyapura Main Road, HEMT Layout, Bengaluru, Karnataka 560097</span></li>' +
+        '<li class="flex gap-3"><i class="fa-solid fa-location-dot text-gold mt-1"></i><span>Shop No. 03, Vidyaranyapura Main Road, HMT Layout, Bengaluru, Karnataka 560097</span></li>' +
         '<li class="flex gap-3"><i class="fa-solid fa-phone text-gold mt-1"></i><a href="tel:+919611370116">+91 96113 70116</a></li>' +
         '<li class="flex gap-3"><i class="fa-solid fa-tty text-gold mt-1"></i><a href="tel:08029902698">080 2990 2698</a></li>' +
         '<li class="flex gap-3"><i class="fa-solid fa-envelope text-gold mt-1"></i><a href="mailto:info@fortunewindoors.com">info@fortunewindoors.com</a></li>' +
