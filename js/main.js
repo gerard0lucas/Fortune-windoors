@@ -113,7 +113,7 @@
     if (!document.querySelector(".whatsapp-float")) {
       const wa = document.createElement("a");
       wa.href = "https://wa.me/919611370116";
-      wa.className = "whatsapp-float fixed bottom-5 right-5 z-40 w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center text-2xl";
+      wa.className = "float-btn float-btn-left";
       wa.target = "_blank";
       wa.rel = "noopener";
       wa.setAttribute("aria-label", "Chat on WhatsApp");
@@ -130,21 +130,21 @@
         '<p class="text-white/70 leading-relaxed">Manufacturer of uPVC and System Aluminium windows and doors in Bengaluru since 2012.</p>' +
         "</div>" +
         '<div><h3 class="font-display font-semibold mb-4">Quick Links</h3>' +
-        '<div class="flex flex-col gap-2 text-white/75">' +
-        '<a href="about.html" class="hover:text-gold">About Us</a>' +
-        '<a href="index.html#services" class="hover:text-gold">Services</a>' +
-        '<a href="products.html" class="hover:text-gold">Products</a>' +
-        '<a href="gallery.html" class="hover:text-gold">Gallery</a>' +
-        '<a href="blog.html" class="hover:text-gold">Blog</a>' +
-        '<a href="contact.html" class="hover:text-gold">Contact</a>' +
-        "</div></div>" +
+        '<ul class="footer-list">' +
+        '<li><a href="about.html">About Us</a></li>' +
+        '<li><a href="index.html#services">Services</a></li>' +
+        '<li><a href="products.html">Products</a></li>' +
+        '<li><a href="gallery.html">Gallery</a></li>' +
+        '<li><a href="blog.html">Blog</a></li>' +
+        '<li><a href="contact.html">Contact</a></li>' +
+        "</ul></div>" +
         '<div><h3 class="font-display font-semibold mb-4">Products</h3>' +
-        '<div class="flex flex-col gap-2 text-white/75">' +
-        '<a href="products.html#upvc" class="hover:text-gold">uPVC Windows</a>' +
-        '<a href="products.html#upvc-doors" class="hover:text-gold">uPVC Doors</a>' +
-        '<a href="products.html#aluminium" class="hover:text-gold">System Aluminium Windows</a>' +
-        '<a href="products.html#aluminium-doors" class="hover:text-gold">System Aluminium Doors</a>' +
-        "</div></div>" +
+        '<ul class="footer-list">' +
+        '<li><a href="products.html#upvc">uPVC Windows</a></li>' +
+        '<li><a href="products.html#upvc-doors">uPVC Doors</a></li>' +
+        '<li><a href="products.html#aluminium">System Aluminium Windows</a></li>' +
+        '<li><a href="products.html#aluminium-doors">System Aluminium Doors</a></li>' +
+        "</ul></div>" +
         '<div><h3 class="font-display font-semibold mb-4">Visit Us</h3>' +
         '<ul class="space-y-3 text-white/75">' +
         '<li class="flex gap-3"><i class="fa-solid fa-location-dot text-gold mt-1"></i><span>Shop No. 03, Vidyaranyapura Main Road, HEMT Layout, Bengaluru, Karnataka 560097</span></li>' +
@@ -169,7 +169,8 @@
 
     const headerRoot = document.getElementById("site-header");
     const progress = document.getElementById("scroll-progress");
-    const backTop = document.querySelector(".back-to-top");
+    const floatBtns = document.querySelectorAll(".float-btn");
+    const firstScreen = document.querySelector(".hero-slideshow, .page-hero");
     let lastY = window.scrollY;
 
     function syncHeaderSpace() {
@@ -201,8 +202,13 @@
       if (progress) {
         progress.style.width = max > 0 ? (y / max) * 100 + "%" : "0%";
       }
-      if (backTop) {
-        backTop.classList.toggle("is-visible", y > 500);
+      if (floatBtns.length) {
+        let show = y > 80;
+        if (firstScreen) {
+          const headerH = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--header-h")) || 118;
+          show = firstScreen.getBoundingClientRect().bottom <= headerH + 12;
+        }
+        floatBtns.forEach(function (btn) { btn.classList.toggle("is-visible", show); });
       }
       lastY = y;
     }, { passive: true });
@@ -297,10 +303,17 @@
   function hideLoader() {
     const loader = document.getElementById("page-loader");
     document.documentElement.classList.remove("is-loading");
-    if (!loader) return;
+    function ready() {
+      document.dispatchEvent(new Event("fortune:ready"));
+    }
+    if (!loader) {
+      ready();
+      return;
+    }
     loader.classList.add("is-done");
     setTimeout(function () {
       loader.remove();
+      ready();
     }, 600);
   }
 
@@ -481,18 +494,25 @@
       counters.forEach(function (el) { write(el, 0); });
     }
 
-    if (!("IntersectionObserver" in window)) {
-      run();
-      return;
+    function startWatching() {
+      if (!("IntersectionObserver" in window)) {
+        run();
+        return;
+      }
+      const io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) run();
+          else reset();
+        });
+      }, { threshold: 0.35 });
+      io.observe(section);
     }
 
-    const io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) run();
-        else reset();
-      });
-    }, { threshold: 0.35 });
-    io.observe(section);
+    if (document.getElementById("page-loader") || document.documentElement.classList.contains("is-loading")) {
+      document.addEventListener("fortune:ready", startWatching, { once: true });
+    } else {
+      startWatching();
+    }
   }
 
   function initBlogCarousel() {
@@ -566,7 +586,7 @@
     if (!document.querySelector(".back-to-top")) {
       const btn = document.createElement("button");
       btn.type = "button";
-      btn.className = "back-to-top";
+      btn.className = "float-btn float-btn-right back-to-top";
       btn.setAttribute("aria-label", "Back to top");
       btn.innerHTML = '<i class="fa-solid fa-arrow-up"></i>';
       btn.addEventListener("click", function () {
