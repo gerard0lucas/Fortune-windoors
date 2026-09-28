@@ -46,7 +46,7 @@
         '<span class="ticker-dot"></span>' +
         '<a href="mailto:info@fortunewindoors.com"><i class="fa-solid fa-envelope text-gold"></i>info@fortunewindoors.com</a>' +
         '<span class="ticker-dot"></span>' +
-        '<span><i class="fa-solid fa-location-dot text-gold"></i>Vidyaranyapura, Bengaluru</span>' +
+        '<span><i class="fa-solid fa-industry text-gold"></i>In-house manufacture</span>' +
         '<span class="ticker-dot"></span>' +
         '<span>Free site measurement</span>' +
         '<span class="ticker-dot"></span>';
@@ -66,7 +66,7 @@
         navLinks("") +
         "</nav>" +
         '<div class="flex items-center gap-2 sm:gap-3 shrink-0">' +
-        '<button type="button" class="js-open-quote hidden sm:inline-flex btn-gold rounded-full px-4 md:px-5 py-2.5 text-sm">Get a Quote</button>' +
+        '<button type="button" class="js-open-quote hidden sm:inline-flex btn-gold rounded-full px-4 md:px-5 py-2.5 text-sm">Book a visit</button>' +
         '<button type="button" id="menu-toggle" class="xl:hidden w-11 h-11 rounded-full border border-navy/15 text-navy" aria-label="Open menu">' +
         '<i class="fa-solid fa-bars"></i></button>' +
         "</div></div></div>" +
@@ -77,7 +77,7 @@
         "</div>" +
         '<nav class="px-6 sm:px-8 pt-6 flex flex-col gap-4 sm:gap-6 text-xl sm:text-2xl font-display font-semibold">' +
         navLinks("text-white") +
-        '<button type="button" class="js-open-quote btn-gold rounded-full px-6 py-3 text-base w-full sm:w-fit mt-4">Get a Quote</button>' +
+        '<button type="button" class="js-open-quote btn-gold rounded-full px-6 py-3 text-base w-full sm:w-fit mt-4">Book a visit</button>' +
         "</nav></div>";
 
       const mobileMenu = header.querySelector("#mobile-menu");
@@ -92,18 +92,21 @@
         '<div id="quote-modal" class="quote-modal fixed inset-0 z-[60] bg-navy/60 backdrop-blur-sm flex items-center justify-center p-4">' +
         '<div class="quote-sheet bg-white rounded-3xl w-full max-w-lg p-5 sm:p-7 relative">' +
         '<button type="button" class="js-close-quote absolute top-4 right-4 text-navy" aria-label="Close quote form"><i class="fa-solid fa-xmark text-xl"></i></button>' +
-        '<p class="eyebrow">Get a quote</p>' +
-        '<h3 class="section-title text-2xl mt-2">Tell us what you need</h3>' +
+        '<p class="eyebrow">Book a measurement</p>' +
+        '<h3 class="section-title text-2xl mt-2">Tell us about the opening</h3>' +
         '<form class="js-quote-form mt-6 space-y-4">' +
         '<input class="form-field w-full border border-navy/15 rounded-xl px-4 py-3" type="text" name="name" placeholder="Your name" required>' +
         '<input class="form-field w-full border border-navy/15 rounded-xl px-4 py-3" type="tel" name="phone" placeholder="Phone number" required>' +
         '<select class="form-field w-full border border-navy/15 rounded-xl px-4 py-3 bg-white" name="product" required>' +
-        '<option value="">Select a product</option>' +
-        '<option>uPVC Windows</option><option>uPVC Doors</option>' +
-        '<option>System Aluminium Windows</option><option>System Aluminium Doors</option>' +
+        '<option value="">What are you replacing?</option>' +
+        '<option>Noisy street-facing windows</option>' +
+        '<option>Leaky balcony / rain around the frame</option>' +
+        '<option>Dusty sills</option>' +
+        '<option>A large opening / slider</option>' +
+        '<option>Not sure — need a visit</option>' +
         '</select>' +
-        '<textarea class="form-field w-full border border-navy/15 rounded-xl px-4 py-3" name="message" rows="3" placeholder="Site location and brief requirement"></textarea>' +
-        '<button type="submit" class="btn-gold w-full rounded-full py-3">Send enquiry</button>' +
+        '<textarea class="form-field w-full border border-navy/15 rounded-xl px-4 py-3" name="message" rows="3" placeholder="Share the room, the problem, or send a photo later on WhatsApp"></textarea>' +
+        '<button type="submit" class="btn-gold w-full rounded-full py-3">Book a site visit</button>' +
         '<p class="js-form-success hidden text-center text-sm text-emerald-700">Thank you. We will get back to you shortly.</p>' +
         "</form></div></div>";
       document.body.appendChild(modalWrap.firstElementChild);
@@ -126,7 +129,7 @@
         '<div class="max-w-7xl mx-auto px-4 sm:px-6 py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-10">' +
         '<div>' +
         '<img src="assets/3.png" alt="Fortune Windoors" class="footer-logo">' +
-        '<p class="leading-relaxed">Manufacturer of uPVC and System Aluminium windows and doors in Bengaluru since 2012.</p>' +
+        '<p class="leading-relaxed">Manufacturer of uPVC and System Aluminium windows and doors since 2012.</p>' +
         "</div>" +
         '<div><h3 class="font-display font-semibold mb-4">Quick Links</h3>' +
         '<ul class="footer-list">' +
@@ -144,9 +147,8 @@
         '<li><a href="products.html#aluminium">System Aluminium Windows</a></li>' +
         '<li><a href="products.html#aluminium-doors">System Aluminium Doors</a></li>' +
         "</ul></div>" +
-        '<div><h3 class="font-display font-semibold mb-4">Visit Us</h3>' +
+        '<div><h3 class="font-display font-semibold mb-4">Contact</h3>' +
         '<ul class="space-y-3">' +
-        '<li class="flex gap-3"><i class="fa-solid fa-location-dot text-gold mt-1"></i><span>Shop No. 03, Vidyaranyapura Main Road, HMT Layout, Bengaluru, Karnataka 560097</span></li>' +
         '<li class="flex gap-3"><i class="fa-solid fa-phone text-gold mt-1"></i><a href="tel:+919611370116">+91 96113 70116</a></li>' +
         '<li class="flex gap-3"><i class="fa-solid fa-tty text-gold mt-1"></i><a href="tel:08029902698">080 2990 2698</a></li>' +
         '<li class="flex gap-3"><i class="fa-solid fa-envelope text-gold mt-1"></i><a href="mailto:info@fortunewindoors.com">info@fortunewindoors.com</a></li>' +
@@ -167,7 +169,7 @@
 
     const headerRoot = document.getElementById("site-header");
     const floatBtns = document.querySelectorAll(".float-btn");
-    const firstScreen = document.querySelector(".hero-slideshow, .page-hero");
+    const firstScreen = document.querySelector(".studio-hero, .hero-slideshow, .page-hero");
     let lastY = window.scrollY;
 
     function syncHeaderSpace() {
@@ -399,8 +401,55 @@
     });
 
     if (counter) counter.textContent = "01";
+    slides[0].classList.add("is-active");
     setProgress(true);
     restart();
+  }
+
+  function initHeroType() {
+    const el = document.querySelector(".js-hero-type");
+    if (!el) return;
+    const words = ["rain.", "traffic.", "dust."];
+    let wordIndex = 0;
+    let charIndex = words[0].length;
+    let deleting = false;
+
+    function tick() {
+      const word = words[wordIndex];
+      if (!deleting) {
+        charIndex += 1;
+        el.textContent = word.slice(0, charIndex);
+        if (charIndex >= word.length) {
+          deleting = true;
+          setTimeout(tick, 1600);
+          return;
+        }
+        setTimeout(tick, 90);
+        return;
+      }
+      charIndex -= 1;
+      el.textContent = word.slice(0, Math.max(charIndex, 0));
+      if (charIndex <= 0) {
+        deleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+        setTimeout(tick, 280);
+        return;
+      }
+      setTimeout(tick, 48);
+    }
+
+    setTimeout(tick, 400);
+  }
+
+  function startHeroType() {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      const el = document.querySelector(".js-hero-type");
+      const caret = document.querySelector(".hero-caret");
+      if (el) el.textContent = "rain, traffic, dust.";
+      if (caret) caret.style.display = "none";
+      return;
+    }
+    initHeroType();
   }
 
   function initReveals() {
@@ -411,7 +460,7 @@
         if (!entry.isIntersecting) return;
         entry.target.classList.add("is-visible");
         const count = entry.target.querySelector("[data-count]");
-        if (count && !count.dataset.done) {
+        if (count && !count.dataset.done && !count.closest("[data-stats]")) {
           count.dataset.done = "1";
           animateCount(count);
         }
@@ -463,9 +512,8 @@
           write(el, target);
           return;
         }
-        write(el, 0);
-        const delay = i * 140;
-        const duration = 1400;
+        const delay = i * 120;
+        const duration = 1200;
         const startAt = performance.now() + delay;
         function frame(now) {
           if (now < startAt) {
@@ -481,22 +529,20 @@
       });
     }
 
-    function reset() {
-      stop();
-      counters.forEach(function (el) { write(el, 0); });
-    }
-
     function startWatching() {
-      if (!("IntersectionObserver" in window)) {
-        run();
-        return;
-      }
+      counters.forEach(function (el) {
+        write(el, Number(el.dataset.count || 0));
+      });
+      if (!("IntersectionObserver" in window)) return;
+      let played = false;
       const io = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
-          if (entry.isIntersecting) run();
-          else reset();
+          if (!entry.isIntersecting || played) return;
+          played = true;
+          run();
+          io.disconnect();
         });
-      }, { threshold: 0.35 });
+      }, { threshold: 0.3 });
       io.observe(section);
     }
 
@@ -567,6 +613,52 @@
     });
   }
 
+  function initSlideWindows() {
+    document.querySelectorAll("[data-slide-window]").forEach(function (root) {
+      const range = root.querySelector(".sw-range");
+      if (!range) return;
+      let touched = false;
+
+      function set(value) {
+        root.style.setProperty("--pos", value + "%");
+      }
+
+      range.addEventListener("input", function () {
+        touched = true;
+        set(range.value);
+      });
+      set(range.value);
+
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) return;
+
+      function glide(from, to, duration, done) {
+        const start = performance.now();
+        function frame(now) {
+          if (touched) return;
+          const t = Math.min(1, (now - start) / duration);
+          const eased = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+          const value = from + (to - from) * eased;
+          range.value = value;
+          set(value);
+          if (t < 1) requestAnimationFrame(frame);
+          else if (done) done();
+        }
+        requestAnimationFrame(frame);
+      }
+
+      const io = new IntersectionObserver(function (entries) {
+        if (!entries[0].isIntersecting) return;
+        io.disconnect();
+        glide(50, 85, 900, function () {
+          glide(85, 15, 1300, function () {
+            glide(15, 50, 900);
+          });
+        });
+      }, { threshold: 0.5 });
+      io.observe(root);
+    });
+  }
+
   function initExtras() {
     if (!document.querySelector(".back-to-top")) {
       const btn = document.createElement("button");
@@ -608,9 +700,15 @@
   renderChrome();
   initAutoScrolls();
   initBlogCarousel();
+  initSlideWindows();
   initExtras();
   bindUi();
   initHero();
+  if (document.documentElement.classList.contains("is-loading") || document.getElementById("page-loader")) {
+    document.addEventListener("fortune:ready", startHeroType, { once: true });
+  } else {
+    startHeroType();
+  }
   initReveals();
   initScrollStats();
 })();
